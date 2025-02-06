@@ -1,0 +1,127 @@
+body {
+    background-image: url("https://img.freepik.com/premium-vector/dark-abstract-background_182384-18.jpg?w=900");
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif; /* Example font: Roboto */
+
+    animation: background-pan 2s ease-in-out infinite; /* Changed to ease-in-out */
+}
+
+@keyframes background-pan {
+    0% {
+        background-position: 0% 0%; /* Start position */
+    }
+    100% {
+        background-position: 100% 100%; /* End position */
+    }
+}
+
+.gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%; /* Increased width for better mobile view */
+    margin: 20px auto;
+}
+
+.gallery h1 {
+    margin-top: 50px; /* Adjusted margin for smaller screens */
+    color: white;
+    font-size: 50px; /* Adjusted font size for smaller screens */
+    text-shadow: 1px 1px 10px red;
+}
+
+.gallery p {
+    text-align: center;
+    padding: 2% 5%;
+    color: yellow;
+    line-height:25px;
+    font-size: 16px; /* Adjusted font size for smaller screens */
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    margin-bottom: 20px;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Key change: Use auto-fit and minmax */
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+.image-grid img {
+    height: 200px; /* Images maintain aspect ratio */
+    width: 100%; /* Images fill their grid cell */
+    object-fit: cover;
+    border-radius: 8px;
+    display: none;
+    border: 1px solid rgba(255, 255, 255, 0.788);
+    box-shadow: 1px 1px 12px red;
+}
+
+.image-grid h4{
+    color:white;
+    font-weight:bold;
+    text-align:center;
+}
+.image-grid img:hover{
+    background-color: rgba(0, 0, 0, 0.685);
+    box-shadow:  1px 2px 20px yellow; /* Inner box shadow */
+    transform: scale(1.06); }
+
+.image-grid img.show {
+    display: block;
+}
+
+.filter-buttons button {
+    padding: 10px 15px; /* Slightly reduced padding */
+    font-weight: bold;
+    margin: 5px; /* Reduced margin */
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px white;
+    font-size: 14px; /* Adjusted font size */
+}
+
+.filter-buttons button:hover {
+    background-color: red;
+    color: white;
+}
+
+.filter-buttons button.target, .filter-buttons button.active {
+    background-color: red;
+    color: white;
+}
+
+button[data-category="all"] {
+    background-color: green;
+    color: white;
+}
+
+/* Media query for smaller screens (e.g., tablets and phones) */
+@media (max-width: 768px) {
+    .gallery h1 {
+        font-size: 24px; /* Further reduce font size on smaller screens */
+    }
+
+    .gallery p {
+        font-size: 14px; /* Further reduce font size on smaller screens */
+    }
+    .filter-buttons button {
+        font-size: 12px; /* Further reduce font size on smaller screens */
+    }
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust minmax for smaller screens */
+        gap: 10px; /*Reduce gap*/
+    }
+    .image-grid img {
+        box-shadow: 1px 1px 8px red; /*Reduce shadow*/
+    }
+}
