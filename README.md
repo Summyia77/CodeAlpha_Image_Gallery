@@ -23,8 +23,11 @@ A user-friendly website for browsing and exploring images related to various cat
 ## User Interface 📸
 
 ![image](https://github.com/user-attachments/assets/a0f8d8d6-e21e-4e45-9d5f-cfe61db082e1)
-<br/>
+*
+*
 ![image](https://github.com/user-attachments/assets/414cddfd-7b5f-4f94-a8d5-225d530e49fc)
+*
+*
 ![image](https://github.com/user-attachments/assets/6e6476e2-2bb3-47d4-b53c-68db328469d2)
 
 
